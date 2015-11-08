@@ -1,0 +1,23 @@
+{
+  "name": "gitbook-plugin-codeex",
+  "version": "0.0.1",
+  "description": "Show snippets of code in Gitbook",
+  "main": "index.js",
+  "keywords": [
+    "gitbook",
+    "gitbook-plugin"
+  ],
+  "author": "Clint Heyer",
+  "license": "MIT",
+  "engines": {
+      "gitbook": "*"
+  },
+  "homepage": "https://github.com/clinth/gitbook-plugin-codeex",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clinth/gitbook-plugin-codeex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/clinth/gitbook-plugin-codeex/issues"
+  }
+}
