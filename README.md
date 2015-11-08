@@ -4,34 +4,41 @@ Show code examples in Gitbook. Two markup tags are provided.
 
 ## codeEx
 
+```
 {% codeEx "Example tag" language="css" %}
 body {
   background-color: blue;
 }
 {% endcodeEx %}
+```
 
 This will wrap the code sample like so:
 
+```
 <div class="example">
   Example tag
   <code class="language-css">
-    body {
+    body { 
       background-color: blue;
     }
   </code>
 </div>
+```
 
 ## markupEx
 
 Shows the code and preview for a fragment of HTML markup.
 
+```
 {% markupEx "Example tag"  %}
 <p>A <strong>bold</strong> word.
-{% endcodeEx %}
+{% endmarkupEx %}
+```
 
 Produces:
 
-<div class="example markup">' +
+```
+<div class="example markup">
   Example tag
   <div>
     <pre><code style="language-markup">
@@ -42,3 +49,4 @@ Produces:
     </div>
   </div>
 </div>
+```
