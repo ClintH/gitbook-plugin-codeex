@@ -1,3 +1,4 @@
+var escape = require('escape-html');
 module.exports = {
     blocks: {
         codeEx: {
@@ -17,15 +18,20 @@ module.exports = {
           process: function(blk) {
             var descr = "";
             if (blk.args && blk.args.length > 0) descr = blk.args[0];
+            // For some reason the body comes in sort-of already escaped, so we have to unescape it
+            var fixedBlock = blk.body.split("&gt;").join(">");
+            fixedBlock = fixedBlock.split("&lt;").join("<");
+            fixedBlock = fixedBlock.trim();
+            var escapedBlock = escape(fixedBlock);
             return '' +
             '<div class="example">' +
               descr +
               '<div>' +
                 '<pre><code style="language-markup">' +
-                  blk.body.trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;') +
-                '</code></pre>' +
+                  escapedBlock +
+                '</pre></code>' +
                 '<div class="preview">' +
-                  blk.body.trim() +
+                  fixedBlock +
                 '</div>' +
               '</div>' +
             '</div>';

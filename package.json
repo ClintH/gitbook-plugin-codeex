@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-codeex",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Show snippets of code in Gitbook",
   "main": "index.js",
   "keywords": [
@@ -19,5 +19,8 @@
   },
   "bugs": {
     "url": "https://github.com/clinth/gitbook-plugin-codeex/issues"
+  },
+  "dependencies": {
+    "escape-html": "^1.0.3"
   }
 }
